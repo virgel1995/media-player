@@ -1,0 +1,167 @@
+body {
+  max-width        : 960px;
+  margin           : auto;
+  text-align       : center;
+  font             : 14px/1.5 "Anonymous Pro", monospace;
+  color            : antiquewhite;
+  background       : url('https://th.bing.com/th/id/OIP.GtFpQTbWCrwagGjkURJ8cgHaEo?pid=ImgDet&w=474&h=296&rs=1');
+  background-size  : cover;
+  background-repeat: no-repeat;
+}
+
+
+h1,
+h2 {
+  font-weight    : lighter;
+  font-size      : 1em;
+  text-decoration: underline;
+}
+
+
+
+.media-buttons {
+  margin-top: 3rem;
+}
+
+.media-button {
+  transition   : all .3s;
+  line-height  : 1;
+  display      : inline-block;
+  font-size    : 1rem;
+  height       : 4rem;
+  width        : 4rem;
+  border-radius: 50%;
+  text-align   : center;
+  background   : transparent;
+  border-style : solid;
+  border-color : black;
+  border-width : thin;
+}
+
+.media-button:hover {
+  color           : white;
+  cursor          : pointer;
+  background-color: black;
+}
+
+.song-list {
+  margin-top: 2rem;
+  list-style: none;
+  padding   : 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.song-list .song {
+  transition        : all .3s;
+  margin-bottom     : 5px;
+  display           : block;
+  -webkit-transition: all .3s;
+  -moz-transition   : all .3s;
+  -ms-transition    : all .3s;
+  -o-transition     : all .3s;
+}
+
+#Progress {
+  display: none;
+  width: 100%;
+  background-color: rgb(237, 248, 75);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#Bar {
+  width           : 0%;
+  /* height          : 30px; */
+  border-radius: 20px;
+  background-color: rgb(234, 76, 240);
+}
+
+.song-list .song:hover .song-name {
+  cursor          : pointer;
+  background-color: black;
+  color           : white;
+  padding         : 5px;
+}
+
+#upload-file-form {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #upload-file-form {
+    display: none;
+  }
+}
+
+#upload-file-form #submit-button {
+  display: none;
+}
+
+#error_type {
+  display              : none;
+  padding              : 3px;
+  background           : red;
+  -o-border-radius     : 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius   : 20px;
+  -ms-border-radius    : 20px;
+  border-radius        : 20px;
+}
+
+.error_type {
+  list-style: none;
+}
+
+
+
+#upload-field {
+  transition    : all .3s;
+  width         : 10em;
+  padding       : 4rem 1rem;
+  outline       : 3px solid black;
+  outline-offset: -15px;
+  margin        : 2rem auto 0;
+  /*cursor      : copy;*/
+}
+
+#upload-field.hover {
+  background-color: black;
+  outline         : 3px dashed white;
+  color           : white;
+}
+
+.audio-player {
+  width: 100%;
+  /* background: #fafa; */
+}
+.dropdown {
+  width: 50%;
+  padding: 5px 0;
+  border-radius: 20px;
+  background-color: #e95353;
+  position: relative;
+  display: inline-block;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e95353;
+  border-radius: 20px;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

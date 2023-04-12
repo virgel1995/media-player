@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anonymous+Pro"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>virus24 Music Player</title>
+  </head>
+  <body>
+    <h1>music player</h1>
+    <audio controls class="audio-player" src="" autoplay></audio>
+    <p class="current-song-label">choose a song below</p>
+
+    <div class="dropdown">
+      <span>Music List</span>
+      <div class="dropdown-content">
+        <ul class="song-list">
+          <li>library is empty</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="error_type">
+      <p>file type not supported</p>
+      <span>Supported Types :</span>
+      <ul id="supported_types"></ul>
+    </div>
+    <form id="upload-file-form" enctype="multipart/form-data">
+      <input
+        type="file"
+        accept="audio/mp3"
+        id="upload-file-button"
+        style="display: none"
+      />
+      <div id="upload-field">
+        Drop your mp3<br />music here
+        <!-- <p id="loading-label" style="display: none">100%</p> -->
+        <div id="Progress">
+          <div id="Bar"></div>
+        </div>
+      </div>
+      <label style="cursor: pointer" for="upload-file-button">
+        <p>or <u>click</u> to select</p>
+      </label>
+      <button id="submit-button" type="submit">Upload</button>
+    </form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="/socketio-stream.js"></script>
+    <script src="/script.js"></script>
+
+    <footer>
+      <br />
+      <p>by Virus24</p>
+    </footer>
+  </body>
+</html>
